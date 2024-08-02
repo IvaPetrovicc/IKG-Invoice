@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-image: url('pozadina.jpg');
+            background-image: url('pozadina1.jpg');
             background-size: cover;
             background-position: center;
             margin: 0;
@@ -303,6 +303,8 @@
             doc.line(15, signatureLineY - 5, 80, signatureLineY - 5); // Signature line for client
             doc.line(130, signatureLineY - 5, 195, signatureLineY - 5); // Signature line for provider
             doc.text('Potpis i pecat izvršitelja usluga', 130, signatureLineY);
+
+            doc.addImage(stampBase64, 'JPEG', 140, signatureLineY - 27, 40, 20); // Adjust position and size as needed
 
             // Preuzimanje PDF-a
             doc.save('racun.pdf');
